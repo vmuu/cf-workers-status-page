@@ -1,18 +1,18 @@
 settings:
-  title: '站点状态检测页'
+  title: '站点状态'
   url: 'https://status.nz.cx' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
   allmonitorsOperational: '所有系统均可运行'
-  notAllmonitorsOperational: '并非所有系统都可以运行'
+  notAllmonitorsOperational: '非所有系统都可运行'
   monitorLabelOperational: '可访问'
   monitorLabelNotOperational: '无法访问'
   monitorLabelNoData: '无数据'
   dayInHistogramNoData: '无数据'
   dayInHistogramOperational: '一切都好'
-  dayInHistogramNotOperational: ' 个事件' # xx incident(s) recorded
+  dayInHistogramNotOperational: ' s' # xx incident(s) recorded
 
 monitors:
   - id: s.nz.cx # 统一标识符
