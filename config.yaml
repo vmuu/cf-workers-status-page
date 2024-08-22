@@ -91,3 +91,9 @@ monitors:
     url: 'https://kuateer.com/'
     method: GET
     expectStatus: 200
+
+  - id: csypay.com
+    name: csypay.com
+    url: 'https://csypay.com/'
+    method: GET
+    expectStatus: 200
