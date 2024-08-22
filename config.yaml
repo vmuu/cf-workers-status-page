@@ -1,0 +1,93 @@
+settings:
+  title: '站点状态检测页'
+  url: 'https://status.nz.cx' # used for Slack messages
+  logo: logo-192x192.png # image in ./public/ folder
+  daysInHistogram: 90 # number of days you want to display in histogram
+  collectResponseTimes: true # collects avg response times from CRON locations
+
+  allmonitorsOperational: '所有系统均可运行'
+  notAllmonitorsOperational: '并非所有系统都可以运行'
+  monitorLabelOperational: '可访问'
+  monitorLabelNotOperational: '无法访问'
+  monitorLabelNoData: '无数据'
+  dayInHistogramNoData: '无数据'
+  dayInHistogramOperational: '一切都好'
+  dayInHistogramNotOperational: ' 个事件' # xx incident(s) recorded
+
+monitors:
+  - id: s.nz.cx # 统一标识符
+    name: s.nz.cx
+    # description: '这个一个描述' # default=empty
+    url: 'https://s.nz.cx/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: true # allows the title to be a link, default=true
+
+  - id: cl.nz.cx
+    name: cl.nz.cx
+    url: 'http://cl.nz.cx/'
+    method: GET
+    expectStatus: 200
+    
+  - id: pan.0ey.cn
+    name: pan.0ey.cn
+    # description: 'Built for anything connected to the Internet.'
+    url: 'https://pan.0ey.cn'
+    method: GET
+    expectStatus: 200
+    linkable: true # allows the title to be a link, default=true
+
+  - id: my-s.nz.cx
+    name: my-s.nz.cx
+    url: 'https://my-s.nz.cx/'
+    method: GET
+    expectStatus: 200
+    
+  - id: s-token.nz.cx
+    name: s-token.nz.cx
+    url: 'https://s-token.nz.cx/'
+    method: GET
+    expectStatus: 200
+
+  - id: chat2api.nz.cx
+    name: chat2api.nz.cx
+    url: 'https://tgapi.nz.cx/'
+    method: GET
+    expectStatus: 200
+	
+  - id: s-tg.nz.cx
+    name: s-tg.nz.cx
+    url: 'https://s-tg.nz.cx/'
+    method: GET
+    expectStatus: 200
+
+  - id: tgapi.nz.cx
+    name: tgapi.nz.cx
+    url: 'https://tgapi.nz.cx/'
+    method: GET
+    expectStatus: 200
+    
+  - id: platform.openai.com.nz.cx
+    name: platform.openai.com.nz.cx
+    url: 'https://platform.openai.com.nz.cx/'
+    method: GET
+    expectStatus: 200
+    
+  - id: dcoker.nz.cx
+    name: dcoker.nz.cx
+    url: 'https://dcoker.nz.cx/'
+    method: GET
+    expectStatus: 200
+    
+  - id: new.nz.cx
+    name: new.nz.cx
+    url: 'https://new.nz.cx/'
+    method: GET
+    expectStatus: 200
+
+  - id: kuateer.com
+    name: kuateer.com
+    url: 'https://kuateer.com/'
+    method: GET
+    expectStatus: 200
